@@ -14,7 +14,7 @@ export const loadIP = async () => {
   if (response.ok) {
     let { origin } = await response.json();
     // obscure last segment for privacy purposes
-    origin = origin.split('.', 3).join('.') + ".xxx"
+    origin = origin.split('.', 3).join('.') + ".xxx";
     // return the result
     return origin
   }

@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 
 const App = props => {
-  const [ip, setIP] = useState(null)
-  const [loading, setLoading] = useState(false)
+  const [ip, setIP] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const getMyIP = () => {
-    setIP('(coming soon)')
-  }
+    setIP('(coming soon)');
+  };
 
   useEffect(() => {
-    setLoading(ip === "")
-  }, [ip])
+    setLoading(ip === "");
+  }, [ip]);
 
   return (
     <div>
@@ -20,9 +20,12 @@ const App = props => {
         ? <p>Loading...</p>
         : <p>{ip}</p>
       }
-      <button onClick={getMyIP} disabled={loading}>{ip ? 'Again' : 'Go'}</button>
+      <button
+          onClick={getMyIP}
+          disabled={loading}
+      >{ip ? 'Again' : 'Go'}</button>
     </div>
-  )
+  );
 };
 
 export default App;

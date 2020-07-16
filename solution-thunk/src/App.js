@@ -8,12 +8,12 @@ const App = props => {
   const dispatch = useDispatch()
 
   const getMyIP = () => {
-    dispatch(loadIP())
-  }
+    dispatch(loadIP());
+  };
 
   useEffect(() => {
-    setLoading(ip === "")
-  }, [ip])
+    setLoading(ip === "");
+  }, [ip]);
 
   return (
     <div>
@@ -23,7 +23,10 @@ const App = props => {
         ? <p>Loading...</p>
         : <p>{ip}</p>
       }
-      <button onClick={getMyIP} disabled={loading}>{ip ? 'Again' : 'Go'}</button>
+      <button
+          onClick={getMyIP}
+          disabled={loading}
+      >{ip ? 'Again' : 'Go'}</button>
     </div>
   )
 };

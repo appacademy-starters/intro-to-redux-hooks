@@ -3,20 +3,20 @@ import { useDispatch, useSelector } from "react-redux";
 import { loadIP, setIP } from "./store/ipAddress";
 
 const App = props => {
-  const [loading, setLoading] = useState(false)
-  const { ip } = useSelector(state => state.ipAddress)
-  const dispatch = useDispatch()
+  const [loading, setLoading] = useState(false);
+  const { ip } = useSelector(state => state.ipAddress);
+  const dispatch = useDispatch();
 
   const getMyIP = async () => {
-    dispatch(setIP(""))
+    dispatch(setIP(""));
 
-    const origin = await loadIP()
-    dispatch(setIP(origin))
-  }
+    const origin = await loadIP();
+    dispatch(setIP(origin));
+  };
 
   useEffect(() => {
-    setLoading(ip === "")
-  }, [ip])
+    setLoading(ip === "");
+  }, [ip]);
 
   return (
     <div>
@@ -26,9 +26,12 @@ const App = props => {
         ? <p>Loading...</p>
         : <p>{ip}</p>
       }
-      <button onClick={getMyIP} disabled={loading}>{ip ? 'Again' : 'Go'}</button>
+      <button
+          onClick={getMyIP}
+          disabled={loading}
+      >{ip ? 'Again' : 'Go'}</button>
     </div>
-  )
+  );
 };
 
 export default App;
