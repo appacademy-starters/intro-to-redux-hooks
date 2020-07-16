@@ -1,8 +1,11 @@
-# Intro to Hooks in React-Redux
+# Get My IP
 
-Help students follow along more easily.
+This is the starter project and two solutions to help you learn to use Hooks
+in **React-Redux**.
 
-## Reading
-
-https://github.com/appacademy/Modular-Curriculum/content/react-redux-v2/topics/react-hooks/readings/reading-intro-to-redux-hooks-js.md
+1. Clone this repository <url>
+2. Copy or work in the starter folder to following along with the reading and/or
+video
+3. Explore either or both of the solution folders if you get stuck or want to 
+run working projects that use the Redux hooks
 
