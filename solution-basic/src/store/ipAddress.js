@@ -16,7 +16,7 @@ export const loadIP = async () => {
     // obscure last segment for privacy purposes
     origin = origin.split('.', 3).join('.') + ".xxx";
     // return the result
-    return origin
+    return origin;
   }
 
 };
